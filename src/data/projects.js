@@ -15,12 +15,13 @@ export const projects = [
   {
     id: 2,
     title: "Knowledge Guided Decoding",
-    description: "Advanced decoding technique that incorporates external knowledge to improve generation quality and accuracy in language models.",
-    technologies: ["Python", "PyTorch", "NLP", "Machine Learning"],
+    description: "Implemented Knowledge-Guided Decoding (KGD), a decoding technique that incorporates external knowledge to improve generation quality and accuracy in language models. The implementation follows the core KGD algorithm from the research paper, which modifies token selection during generation by computing knowledge-guided rewards for candidate tokens and adjusting logits accordingly. The system features document chunking and retrieval using sentence transformers, three reward functions (similarity-based, entailment-based, and combined), and a decoding algorithm that steers generation toward more factual outputs. Evaluated on the Natural Questions dataset using OLMoE and Llama models, with comprehensive experimental comparisons across multiple reward configurations and hyperparameters.",
+    technologies: ["Python", "PyTorch", "NLP", "Machine Learning", "Sentence Transformers"],
     githubUrl: "https://github.com/Ellaaraa/moe-knowledge-guided-decoding",
     highlights: [
-      "Improved generation quality by incorporating external knowledge",
-      "Research project in natural language processing"
+      "Implemented KGD algorithm with document retrieval and three reward functions",
+      "Built evaluation framework with Exact Match and F1 metrics",
+      "Created experimental comparison system with visualization tools"
     ]
   },
   {
@@ -44,6 +45,18 @@ export const projects = [
       "BERT-based semantic matching",
       "Improved recruitment efficiency"
     ]
-  }
+  },
+  {id: 5,
+    title: "Uncovering Business Success Factors Through Machine Learning on Yelp Data",
+    description: "Comprehensive machine learning analysis of Yelp restaurant reviews to identify factors driving business success. The project includes fine-tuning DistilBERT for sentiment classification on 1.6M+ reviews, applying SHAP for model interpretability, performing K-Means clustering to segment restaurants, and using CatBoost for rating prediction. Analyzed pre- and post-COVID sentiment trends and built evaluation pipelines to understand how business characteristics correlate with success metrics.",
+    technologies: ["Python", "PyTorch", "DistilBERT", "SHAP", "CatBoost", "scikit-learn", "NLP", "Machine Learning", "Data Analysis"],
+    githubUrl: "https://github.com/Ellaaraa/yelp_reviews_analysis",
+    highlights: [
+      "Fine-tuned DistilBERT for sentiment classification on 1.6M+ Yelp reviews with pre/post-COVID analysis",
+      "Applied SHAP for model interpretability to identify key tokens driving sentiment predictions",
+      "Implemented K-Means clustering with PCA to segment restaurants by price range and review patterns",
+      "Built CatBoost classifier achieving 85% accuracy for business rating prediction with feature importance analysis"
+    ]
+}
 ];
 
