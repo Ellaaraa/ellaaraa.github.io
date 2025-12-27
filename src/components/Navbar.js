@@ -5,7 +5,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'projects', 'resume'];
+      const sections = ['about', 'projects', 'experience', 'resume'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -64,6 +64,17 @@ export default function Navbar() {
             }`}
           >
             Projects
+          </a>
+          <a
+            href="#experience"
+            onClick={(e) => handleClick(e, 'experience')}
+            className={`font-medium transition-colors duration-200 ${
+              activeSection === 'experience'
+                ? 'text-blue-600 border-b-2 border-blue-600 pb-1'
+                : 'text-gray-700 hover:text-blue-600'
+            }`}
+          >
+            Experience
           </a>
           <a
             href="#resume"
